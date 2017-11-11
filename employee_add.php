@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s6">
                             <input type="text" name="firstName" class="validate">
                             <label for="firstName">First name *</label>
                         </div>

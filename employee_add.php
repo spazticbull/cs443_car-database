@@ -117,6 +117,10 @@
                 </form>
             </div><!-- ./row -->
         </div><!-- responsive ending for small only -->
+        
+        <div class="row">
+            <h4>Would you like to add a profile image?</h4>
+        </div>
     </div><!-- ./container -->
     
     <script>

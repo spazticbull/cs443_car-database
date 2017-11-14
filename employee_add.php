@@ -5,9 +5,6 @@
 
 <head>
     <style type="text/css">
-        .radio-pad {
-            padding-right: 15px;
-        }
     </style>
 </head>
 
@@ -118,9 +115,9 @@
             </div><!-- ./row -->
         </div><!-- responsive ending for small only -->
         
-        <div class="row">
-            <h4>Would you like to add a profile image?</h4>
-        </div>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+        </button>
     </div><!-- ./container -->
     
     <script>

@@ -5,9 +5,6 @@
 
 <head>
     <style type="text/css">
-        .radio-pad {
-            padding-right: 15px;
-        }
     </style>
 </head>
 

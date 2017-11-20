@@ -48,6 +48,24 @@
                 $lastNameErr = "Only letters and spaces allowed";
             }
         }
+
+        // validate street address
+        if (empty($_POST["streetAddr"])) {
+            $streetAddrErr = "Last name is required";
+        } else {
+            $streetAddr = test_input($_POST["streetAddr"]);
+            // check if name only contains letters and whitespace
+            if (!preg_match("/^[a-zA-Z0-9- ]+$/i", $streetAddr)) {
+                $streetAddrErr = "Only letters and spaces allowed";
+            }
+        }
+
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
     }
     ?>
     
@@ -60,7 +78,7 @@
                         <label for="email" data-error="<?php echo $emailErr;?>">Email *</label>
                     </div>
                     <div class="input-field col s12 m6">
-                        <input type="text" class="validate" name="firstName" value="<?php echo $firstName ?>">
+                        <input type="text" name="firstName" value="<?php echo $firstName ?>">
                         <label for="firstName" data-error="<?php echo $firstNameErr;?>">First name *</label>
                     </div>
                     <div class="input-field col s12 m6">

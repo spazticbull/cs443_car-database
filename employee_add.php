@@ -1,4 +1,4 @@
-<?php require_once "header.php";?>    
+<?php $title="Add Employee"; require_once "header.php";?>    
 
 <head>
     <style type="text/css">
@@ -290,3 +290,5 @@
         });
     </script>
 </body>
+
+<php require_once("footer.php");

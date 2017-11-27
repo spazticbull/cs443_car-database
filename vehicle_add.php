@@ -197,13 +197,11 @@ function clean($data) {
 
 <script>
     $(document).ready(function() {
-        console.log("In jQuery ready function");
         // performs custom validation on form elements
         $("#addVic").validate( {
             errorElement: "div",
             // specificies error placement for any element
             errorPlacement: function(error, element) {
-                console.log("In jQuery validation error placement function");
                 var placement = $(element).data("error");
                 if (element.is(":radio")) {
                     $("#radioError").text("Please choose vehicle type");

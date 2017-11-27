@@ -34,7 +34,7 @@
     <!--navbar-->
     <nav>
         <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">AutoCatz</a>
+            <a href="index.php" class="brand-logo">AutoCatz</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="service.php"><i class="material-icons left">build</i>Service</a></li>

@@ -88,19 +88,19 @@ function clean($data) {
                 <h5>Model</h5>
             </div>
             <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s12 m12 l12">
                     <input type="text" maxlength="17" name="vin" placeholder="WBAET37434NJ96304" value="<?php echo $vin ?>">
                     <label class="active" for="vin" data-success="Eggstravagent!">VIN (Vehicle Identification Number) *</label>
                 </div>
-                <div class="input-field col s12 m6">
+                <div class="input-field col s12 m6 l5">
                     <input type="text" maxlength="30" name="make" placeholder="Toyota" value="<?php echo $make ?>">
                     <label class="active" for="make" data-success="Perfect!">Make *</label>
                 </div>
-                <div class="input-field col s12 m6">
+                <div class="input-field col s12 m6 l5">
                     <input type="text" maxlength="30" name="model" placeholder="Camry" value="<?php echo $model ?>">
                     <label class="active" for="model" data-success="Awesome!">Model *</label>
                 </div>
-                <div class="input-field col s12">
+                <div class="input-field col s12 m12 l2">
                     <input type="number" maxlength="4" name="year" placeholder="2001" value="<?php echo $year ?>">
                     <label class="active" for="year" data-success="Eggstreme!">Year *</label>
                 </div>

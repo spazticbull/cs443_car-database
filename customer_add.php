@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["phone"])) {
         $phone = clean($_POST["phone"]);
     }
-    // select customer type
+    // clean customer type
     if (isset($_POST["custType"])) {
         $custType = $_POST["custType"];
         $custType = ucwords($custType);

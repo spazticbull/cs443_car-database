@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["depDate"])) {
         $depDate = clean($_POST["depDate"]);
     }
-    // select vehicle type
+    // clean vehicle type
     if (isset($_POST["vicType"])) {
         $vicType = $_POST["vicType"];
         $vicType = ucwords($vicType);

@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $lastName = clean($_POST["lastName"]);
         $lastName = ucwords($lastName);
     }
-    // clean last name
+    // clean birth date
     if (isset($_POST["birthDate"])) {
         $birthDate = clean($_POST["birthDate"]);
     }
@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["phone"])) {
         $phone = clean($_POST["phone"]);
     }
-    // select customer type
+    // clean customer type
     if (isset($_POST["custType"])) {
         $custType = $_POST["custType"];
         $custType = ucwords($custType);
@@ -174,7 +174,7 @@ function clean($data) {
                     ('$firstName', '$lastName', '$email', '$birthDate', '$streetAddr', '$cityAddr', '$stateAddr', '$zipAddr', '$phone');";
                 
                     if ($conn->query($sql) === TRUE) {
-                        echo "Customer " . $firstName . " " . $lastName . " has been added to the database successfully" . "<br>";
+                        echo "Customer " . $firstName . " " . $lastName . " has been added to the customer table successfully" . "<br>";
                     } else {
                         echo "Error: " . $sql . "<br>" . $conn->error . "<br>";
                         die;
@@ -185,7 +185,7 @@ function clean($data) {
                     ((SELECT id FROM customer WHERE firstname = '$firstName' AND lastname = '$lastName' AND email = '$email'), '$custType');";
                 
                     if ($conn->query($sql) === TRUE) {
-                        echo "Customer type of " . $firstName . " " . $lastName . " has been added to the database successfully" . "<br>";
+                        echo "Customer type of " . $firstName . " " . $lastName . " has been added to the customer_type table successfully" . "<br>";
                         $message = "Customer has been added successfully!";
                         echo "<script type='text/javascript'>alert('$message');</script>";
                         // must use script to not interfere with earlier php header call

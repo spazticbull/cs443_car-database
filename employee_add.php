@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $lastName = clean($_POST["lastName"]);
         $lastName = ucwords($lastName);
     }
-    // clean last name
+    // clean birth date
     if (isset($_POST["birthDate"])) {
         $birthDate = clean($_POST["birthDate"]);
     }
@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["phone"])) {
         $phone = clean($_POST["phone"]);
     }
-    // select employee type
+    // clean employee type
     if (isset($_POST["empType"])) {
         $empType = $_POST["empType"];
         $empType = ucwords($empType);
@@ -174,7 +174,7 @@ function clean($data) {
                     ('$firstName', '$lastName', '$email', '$birthDate', '$streetAddr', '$cityAddr', '$stateAddr', '$zipAddr', '$phone');";
                 
                     if ($conn->query($sql) === TRUE) {
-                        echo "Employee " . $firstName . " " . $lastName . " has been added to the database successfully" . "<br>";
+                        echo "Employee " . $firstName . " " . $lastName . " has been added to the employee table successfully" . "<br>";
                     } else {
                         echo "Error: " . $sql . "<br>" . $conn->error . "<br>";
                         die;
@@ -185,7 +185,7 @@ function clean($data) {
                     ((SELECT id FROM employee WHERE firstname = '$firstName' AND lastname = '$lastName' AND email = '$email'), '$empType');";
                 
                     if ($conn->query($sql) === TRUE) {
-                        echo "Employee type of " . $firstName . " " . $lastName . " has been added to the database successfully" . "<br>";
+                        echo "Employee type of " . $firstName . " " . $lastName . " has been added to the employee_type table successfully" . "<br>";
                         $message = "Employee has been added successfully!";
                         echo "<script type='text/javascript'>alert('$message');</script>";
                         // must use script to not interfere with earlier php header call

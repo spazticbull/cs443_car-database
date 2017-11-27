@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!--Favicon-->
     <link rel="shortcut icon" href="http://sstatic.net/so/favicon.ico">
+    <!--Favicon browser tab icon-->
+    <link rel="icon" href="autocatz.ico">
     
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>

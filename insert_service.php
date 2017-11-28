@@ -84,7 +84,7 @@ if (!array_key_exists($vin, $vinCheckArray)) {
     $message="Please check vehicle if in inventory";
     $vinCheck=false;
 } else {
-    if (strcmp(strtolower($vin), "service")!==0) {
+    if (strcmp(strtolower($vinCheckArray[$vin]), "service")!==0) {
         $vinCheckUpdateQuery="UPDATE inventory SET vehicle_type = 'Service' WHERE vin = '$vin' ";
     }
 
@@ -164,6 +164,7 @@ if (($vinCheck==true)&&($customerId==true)&&($employeeId==true)) {
             $message="Inserted in service customer";
         }
 
+        /*INSERT IN BILLING ONLY AFTER INSERT IN SERVICE IS SUCCESSFULL*/
         $billingQuery="INSERT INTO billing (customer_id, service_id, status) VALUES ($customerId,$insert_service_id, 'PENDING')";
 
         if (!($billingResult=mysqli_query($conn, $billingQuery))) {
@@ -174,8 +175,6 @@ if (($vinCheck==true)&&($customerId==true)&&($employeeId==true)) {
 
         $message="Successfully created a new service";
     }
-} else {
-    $message="An error occured while executing operations";
 }
 
 

@@ -41,13 +41,12 @@ $(document).ready(function() {
       service.push($.trim($(this).attr("value_2")));
     });
 
-    var vehicle_arrival = vehicle_arrive_date + " " + vehicle_arrive_time;
-    var eta = vehicle_eta_date + " " + vehicle_eta_time;
-    var vehicle_pickup = vehicle_complete_date + " " + vehicle_complete_time;
-    var customer_pickup = customer_pickup_date + " " + customer_pickup_time;
+    var vehicle_arrival = vehicle_arrive_date + " " + vehicle_arrive_time + ":00";
+    var eta = vehicle_eta_date + " " + vehicle_eta_time + ":00";
+    var vehicle_pickup = vehicle_complete_date + " " + vehicle_complete_time + ":00";
+    var customer_pickup = customer_pickup_date + " " + customer_pickup_time + ":00";
 
     var dataString = "vin=" + vin + "&mileage_before=" + mileage_before + "&mileage_after=" + mileage_after + "&final_billing=" + final_billing + "&vehicle_arrival=" + vehicle_arrival + "&eta=" + eta + "&vehicle_pickup=" + vehicle_pickup + "&customer_pickup=" + customer_pickup + "&customer_id=" + customer_id + "&employee_id=" + employee_id + "&service=" + service;
-
 
     $.ajax({
       type: "POST",
@@ -75,7 +74,7 @@ $(document).ready(function() {
     today: 'Today',
     clear: 'Clear',
     close: 'Ok',
-    format: 'yyyy-dd-mm',
+    format: 'yyyy-mm-dd',
     closeOnSelect: false // Close upon selecting a date,
   });
 
